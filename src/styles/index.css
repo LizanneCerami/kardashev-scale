@@ -3,9 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 
-
 body {
   background-color: rgb(9, 8, 8);
+  background-image: url("../images/bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 h1,h2,h3, p {
@@ -22,18 +25,45 @@ p {
   font-size: 20px;
 }
 
+a:link,
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: purple;
+  text-decoration: none;
+}
+
 h1 {
-  font-size: 60px;
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
 }
 
 h2 {
   font-size: 30px;
 }
 
-.container {
+main, section, footer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+section.container {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+section.container figure {
+  margin: 0;
+  padding: 0;
+  margin-right: 15px;
+}
+
+section.container div {
+  width: 30%;
 }
 
 section.container figure {
@@ -48,4 +78,13 @@ section.container figure img {
 section.container figure img:hover {
   transform: scale(1.3);
   filter:drop-shadow(10px 10px 30px rgba(255, 255, 255, 0.32));
+}
+
+section.container figure summary {
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
 }
